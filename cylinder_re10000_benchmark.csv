@@ -1,0 +1,68 @@
+# ==============================================================================
+# BENCHMARK GROUND TRUTH CHUAN XAC TU 4 BAI BAO GOC:
+# 1. Dong, Lucor, Karniadakis (DOD_UGC 2004)
+# 2. Dong & Karniadakis (Journal of Fluids and Structures, Vol. 20, 2005)
+# 3. Dong, Karniadakis, Ekmekci, Rockwell (Journal of Fluid Mechanics, Vol. 569, 2006)
+# 4. C. Norberg (Journal of Fluids and Structures, Vol. 17, 2003)
+# ------------------------------------------------------------------------------
+# CAC DAI LUONG TICH PHAN (INTEGRATED QUANTITIES) TAI Re = 10,000:
+# He so can trung binh (Cd_mean)        : 1.143 (DNS-B3, Dong 2005/2006), 1.104 (Wieselsberger), 1.186 (Gopalkrishnan)
+# He so nang dao dong (Cl_rms)          : 0.448 (DNS-B3), 0.394 (Norberg 2003), 0.463 (Bishop & Hassan)
+# So Strouhal tach xoay (St = f*D/U0)   : 0.203 (DNS-B3), 0.202 (Norberg 2003), 0.201 (Bishop & Hassan)
+# He so ap suat day tru (Cpb)           : -1.129 (DNS-B3, Dong 2005/2006), -1.112 (Williamson 1996) -> Do hut day -Cpb = +1.129
+# Chieu dai bong hoan luu (Lr/D)        : 0.82 (DNS), 0.78 (PIV Experiment, Dong 2006) tinh tu day tru (x_base = 0.5D)
+# Goc tach dong lop bien (theta_sep)    : 80 - 84 deg
+# ==============================================================================
+SECTION: SURFACE_PRESSURE_DISTRIBUTION
+# theta_deg: goc quanh tru (0 deg = diem dung dau mui, 180 deg = day tru phia sau)
+# Cp_mean: he so ap suat trung binh thoi gian tu DNS-B3 (Dong 2005, 2006) va Norberg (1992, 2003)
+theta_deg,Cp_mean
+0.0,1.000
+10.0,0.920
+20.0,0.730
+30.0,0.420
+40.0,0.020
+50.0,-0.480
+60.0,-0.920
+65.0,-1.150
+70.0,-1.320
+72.0,-1.380
+75.0,-1.420
+78.0,-1.350
+80.0,-1.280
+82.0,-1.210
+84.0,-1.150
+90.0,-1.130
+100.0,-1.129
+110.0,-1.129
+120.0,-1.129
+130.0,-1.130
+140.0,-1.130
+150.0,-1.130
+160.0,-1.130
+170.0,-1.130
+180.0,-1.130
+
+SECTION: CENTERLINE_WAKE_VELOCITY
+# Goc toa do x:
+# - x_over_D: toa do tinh tu TAM TRU (x=0 la tam tru, x=0.5D la day tru phia sau)
+# - x_from_base_over_D: toa do tinh tu DAY TRU (x_base = 0.0)
+# - uc_over_U0: van toc trung binh huong x tren duong tim (y=0) chuan hoa theo U0
+# Luu y: Diem u=0 (dong bong hoan luu Lr) nam tai x_over_D = 1.32 (tuc cach day tru 0.82D)
+x_over_D,x_from_base_over_D,uc_over_U0
+0.50,0.00,0.000
+0.60,0.10,-0.120
+0.70,0.20,-0.210
+0.85,0.35,-0.249
+1.00,0.50,-0.200
+1.15,0.65,-0.110
+1.28,0.78,0.000
+1.32,0.82,0.000
+1.50,1.00,0.180
+2.00,1.50,0.450
+3.00,2.50,0.660
+4.00,3.50,0.750
+5.00,4.50,0.800
+6.00,5.50,0.830
+8.00,7.50,0.880
+10.00,9.50,0.910
